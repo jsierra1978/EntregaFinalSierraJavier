@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+<div id="contactwrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <h1>CONTACTAME</h1>
+        </div>
+      </div>
+    </div>
+    <!-- /container -->
+  </div>
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="centered">Formulario de Conatcto</h2>
+
+          {%if misContactos.error%}
+
+          <p style="color: red;"> Están mal los datos, revisar</p>
+
+          {% endif %}
+          
+          
+         
+          <form action="" method="POST" style="text-align: center;" >{% csrf_token %}
+
+            <table style="color:black; margin:20px auto">{{misContactos.as_table}}</table>
+  
+            <input type="submit", value="Enviar" style="width: 150px; margin:10px auto">
+              
+           
+                      
+
+          </form>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock  %}

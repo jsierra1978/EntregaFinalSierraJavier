@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %} 
+
+
+<div id="workwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-3">
+        
+        <h1>JAVIERMM.</h1>
+        <h1>SIERRA</h1>
+        
+      </div>
+    </div>
+  </div>
+  <!-- /container -->
+</div>
+<section id="works"></section>
+<div class="container">
+  <div class="row centered mt mb">
+    <div class="col-lg-8 col-lg-offset-2">
+      <h2>ACERCA DE MIS EXPERIENCIAS</h2>
+      
+    </div>
+  </div> 
+</div>  
+{% for p in portfolio %}
+<div>
+  <div class="col-lg-8 col-lg-offset-2">
+    <h2>{{p.titulo}}</h2>
+    <p>{{p.subtitulo}}</p>
+    <p>{{p.descripcion}}</p>
+</div>
+  <div class="col-lg-10 col-lg-offset-4 mt">
+    <img class="img-responsive" src="{{p.image.url}}" alt="" style="width: 35%;">
+    <br>
+  </div>
+   
+
+  {%endfor%}
+  
+</div>  
+
+
+{% endblock %}
+  
+
+
+
+
+
+
